@@ -11,13 +11,162 @@
     <title>CV JEBALI MAHJOUB</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+  <!-- navbar -->
+
+    <div class="container">
+    <?php 
+    include 'navBar.php';
+   ////////////////////////////
+  function ajouterDix($dix)
+  {
+   return $dix +=10;
+  }
+    $ajouterDix = ajouterDix(20);
+    
+    ?> <pre> <?php var_dump($ajouterDix); ?> </pre>
+    
+    
+    <?php
+    /////////////////////////////////////
+    function somme($A,$B)
+    {
+      return $A + $B;
+    }
+
+    $somme = somme(10,20);
+
+    echo "la somme de deux nombre est " .$somme;
+
+    ///////////////////////////////////////
+
+/*
+    $bonjourEleve = direBonjour($nom);
+    echo direBonjour('Alexandre'); // 'Bonjour Alexandre, ça va ?' > Niveau 1
+    echo direBonjour('Alexandre', 'h1'); // '<h1>Bonjour Alexandre, ça va ?</h1>' > Niveau 2
+*/
+?>
+<br>
+<?php
+    function bonjourEleve($nom)
+    {
+      return "Bonjour $nom , ça va ?";
+    }
+    echo bonjourEleve('Alexandre');
 
 
-        <?php 
-        
-         echo "hello world"
-        ?>
+    /*
+    $bonjourEleve = direBonjour($nom);
+    echo direBonjour('Alexandre'); // 'Bonjour Alexandre, ça va ?' > Niveau 1
+    echo direBonjour('Alexandre', 'h1'); // '<h1>Bonjour Alexandre, ça va ?</h1>' > Niveau 2
+*/
+
+     ?>
+
+<br>
+<?php
+    function direBonjour($nom ,$balise ,$message )
+    {
+      return "<$balise> $nom $message   , ça va ? </$balise>";
+    }
+    echo direBonjour('Alexandre' ,'h1','bonjour');
+
+
+
+
+/*
+//Ecrire la methode Adequat
+    $variableToDump; 
+    debug($variableToDump);
+    //affiche <pre>[resultat du var_dump]</pre> dans le DOM
+
+*/ 
+
+     ?>
+<br>
+<?php
+      $variableToDump = [1,2,3,4];
+      function debug($toDebug)
+      {
+        echo '<pre>';
+        var_dump($toDebug);
+        echo '</pre>';
+      }
+      //echo $variableToDump;
+      debug($variableToDump);
+    
+
+     ?>***********************************************<br>
+     <?php
+     $liste = [1,2,3,4];
+      function debug1($variable, $arret = false )
+      {
+        echo '<pre>';
+        var_dump($variable);
+        echo '</pre>';
+
+        if ($arret = true) {
+          print_r($variable);
+          die();
+        }
+      }
+      //debug1($liste)
+
+     ?>
+
+     <?php 
+     
+     $liste_eleves = [
+      'Alexandre',
+      'Noe', 
+      'David',
+      'Lila',
+      'Rudy',
+      'Mike',
+      'Celine',
+      'Celine',
+      'Laetitia',
+      'Samia',
+      'Mahjoub',
+  ];  
+
+  foreach ($liste_eleves as $key => $value) {
+    
+    echo direBonjour($value , 'h5', 'bonjour');
+  }
+  ?>
+  *****************************************************************<br>
+  <?php
+
+
+
+  function foreachList($list)
+  {
+    foreach ($list as $key => $value) {
+    
+      echo direBonjour($value , 'h5', 'bonjour');
+    }
+  }
+  foreachList($liste_eleves);
+     ?>
+
+
+    
+<?php 
+ function dirBonjourAtous($liste, $balise, $message )
+ {
+  foreach ($liste as $key => $value)
+   {
+    
+    echo direBonjour($value , $balise , $message);
+  }
+
+ }
+ dirBonjourAtous($liste_eleves, 'p' , 'hello');
+
+?>
+
+    </div>
+
 
 
 
