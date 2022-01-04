@@ -165,6 +165,33 @@
 
 ?>
 
+
+<?php 
+$liste_eleves_deux_dimensions = [
+  'Alexandre' => ['message' => "Bonjour !",],
+  'Noe' => ['message' => "Salut !",], 
+  'David' => ['message' => "Ciao !",],
+  'Lila' => ['message' => "Hello !",],
+  'Rudy' => ['message' => "Welcome !",],
+  'Mike' => ['message' => "Hi !",],
+  'Celine' => ['message' => "Plop !",],
+  'Celine' => ['message' => "Hola !",],
+  'Laetitia' => ['message' => "Yo !",],
+  'Samia' => ['message' => "Hallo !",],
+  'Mahjoub' => ['message' => "Coucou !",],
+];
+foreach ($liste_eleves_deux_dimensions as $key => $value) {
+
+ echo direBonjour($key,'h4', $value["message"]);
+
+  echo '<br>';
+
+}
+
+
+
+?>
+
     </div>
 
 
