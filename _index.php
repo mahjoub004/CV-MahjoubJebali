@@ -11,15 +11,13 @@
     <title>CV JEBALI MAHJOUB</title>
   </head>
   <body>
-      <div class="container-fluid">
-          <h1>Hello, world!</h1>
+    <h1>Hello, world!</h1>
+
 
         <?php 
         
          echo "hello world"
         ?>
-      </div>
-    
 
 
 
