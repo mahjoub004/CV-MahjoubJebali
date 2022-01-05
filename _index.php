@@ -180,6 +180,8 @@ $liste_eleves_deux_dimensions = [
   'Samia' => ['message' => "Hallo !",],
   'Mahjoub' => ['message' => "Coucou !",],
 ];
+
+
 foreach ($liste_eleves_deux_dimensions as $key => $value) {
 
  echo direBonjour($key,'h4', $value["message"]);
@@ -187,9 +189,7 @@ foreach ($liste_eleves_deux_dimensions as $key => $value) {
   echo '<br>';
 
 }
-
-
-
+//debug($liste_eleves_deux_dimensions['mike']);
 ?>
 
     </div>
